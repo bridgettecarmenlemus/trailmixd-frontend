@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
+import LoggedInPage from './components/Footer';
+import Header from './components/Header'
 
 function App() {
+  const [hikingTrails, setHikingTrails] = useState()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1>Trailmix'd </h1>
+    <h2>Sign up to review your first hike!</h2>
+    {/* <h2 onClick={Sign Up} </h2> */}
+    // <Hero hikingTrails={hikingTrails} setHikingTrails={setHikingTrails}/>
+    </>
   );
 }
 
