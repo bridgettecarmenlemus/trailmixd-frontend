@@ -13,23 +13,43 @@ export default function Header() {
     //   <div>Sign up</div>
     // </nav>
     <>
-    <Nav className="justify-content-end" activeKey="/home">
+    <div className="nav">
+    <Nav className="justify-content-end nav" activeKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-  
-          </Nav.Link>
+          <Nav.Link href="/home">TRAILMIX'D</Nav.Link>
         </Nav.Item>
       </Nav>
+        <div className="nav">
+        <Nav.Item>
+          <Nav.Link eventKey="about">About</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="team">Team</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="locations">Locations</Nav.Link>
+        </Nav.Item>
+        </div>
+    <Nav className="justify-content-end nav" activeKey="/home">
+        {/* <Nav.Item>
+          <Nav.Link href="/home">TRAILMIX'D</Nav.Link>
+        </Nav.Item> */}
+        {/* <div> */}
+        {/* <Nav.Item>
+          <Nav.Link eventKey="about">About</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="team">Team</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="locations">Locations</Nav.Link>
+        </Nav.Item> */}
+        {/* </div> */}
+        <Nav.Item>
+          <Nav.Link eventKey="login">Login</Nav.Link>
+        </Nav.Item>
+      </Nav>
+      </div>
     </>
   );
 }
