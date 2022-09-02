@@ -4,6 +4,7 @@
     flex-direction: row;
     background-color: #789746;
     justify-content: space-between;
+    --bs-nav-link-color: #141619;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
