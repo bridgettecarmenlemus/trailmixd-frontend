@@ -4,7 +4,7 @@ import React from "react";
 export default function Main () {
     return(
         <>
-        <div>
+        <div className="main">
         <a href="https://www.linkedin.com/in/bridgettecarmenlemus/" target="_blank"><button>LinkedIn</button></a>
         <a href="https://github.com/bridgettecarmenlemus"
         target="_blank"><button>GitHub</button></a>

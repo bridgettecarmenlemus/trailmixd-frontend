@@ -1,0 +1,23 @@
+.footer {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
+    padding-top: 9px;
+    color: #fff;
+    background-color: #789746;
+}
+
+.footerButtonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    
+}
+
+
+

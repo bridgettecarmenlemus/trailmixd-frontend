@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./App.css"
@@ -13,14 +13,14 @@ import ListOfTrails from './pages/ListOfTrails'
 // let firebaseui = require('firebaseui')
 
 function App() {
-  const [hikingTrails, setHikingTrails] = useState()
+  // const [hikingTrails, setHikingTrails] = useState()
   return (
     <>
     <BrowserRouter>
     <Header/>
     <Routes>
       <Route index element={<Home/>} />
-      <Route path='listoftrails' element={<ListOfTrails />}/>
+      <Route path='/listoftrails' element={<ListOfTrails />}/>
       {/* <Route path='about' element={<About />}/>
       <Route path='about' element={<About />}/> */}
     </Routes>
@@ -30,7 +30,6 @@ function App() {
     <h1>Trailmix'd </h1> */}
     {/* <h2>Sign up to review your first hike!</h2> */}
     {/* <Hero hikingTrails={hikingTrails} setHikingTrails={setHikingTrails}/> */}
-    {/* <Home/> */}
     </>
   );
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
+import "./Hero.css";
+import video from "../assets/videos/mtnrange.mp4";
 
 // const hero = () => {}
 
@@ -16,20 +18,24 @@ import { useEffect } from "react";
 //         <>
 //         <h1></h1>
 //         {trail["Hiking Trail"]}
-        
+
 //         </>;
 //       })}
 //     </>
 //   );
 // }
 
-
-export default function Hero () {
-    return(
-    <div>
+export default function Hero() {
+  return (
+    <div className="hero-container">
+      <div className="welcome-container">
         <h1>Welcome</h1>
-        <h2>Please sign up to review yourfirst hiking trail!</h2>
-        <button>Sign Up</button>
+        <h2>Please sign up to review your first hiking trail!</h2>
+      <button>Sign Up</button>
+      </div>
+      <div className="video-container">
+        <video src={video} autoPlay loop muted className="background-video" />
+      </div>
     </div>
-    );
+  );
 }
