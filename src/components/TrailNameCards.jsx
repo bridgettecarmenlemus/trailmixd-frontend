@@ -4,7 +4,6 @@ import "../pages/ListOfTrails.css";
 import ReviewTrailModal from "./ReviewTrailModal";
 import Button from "react-bootstrap/Button";
 
-
 export default function TrailNameCards({ trail }) {
   const [show, setShow] = useState(false);
 
@@ -17,9 +16,9 @@ export default function TrailNameCards({ trail }) {
           <Card.Text>{trail.Description}</Card.Text>
           {console.log(trail)}
         </Card.Body>
-      <Button className="reviewButton" onClick={() => setShow(true)}>
-        Review this Trail ⭐️
-      </Button>
+        <Button className="reviewButton" onClick={() => setShow(true)}>
+          Review this Trail ⭐️
+        </Button>
       </Card>
       <ReviewTrailModal trail={trail} show={show} setShow={setShow} />
     </>

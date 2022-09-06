@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import ModalTitle from "react-bootstrap/ModalTitle";
 
-
-export default function ReviewTrailModal({trail, show, setShow}) {
-
+export default function ReviewTrailModal({ trail, show, setShow }) {
+  const { _id } = trail;
+  const [email, setEmail] = useState("");
+  const [review, setReview] = useState("");
+  console.log(trail);
   const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
+  const addReview = () => {
+    console.log("we made it");
+    fetch(`http://localhost:5001/trailmixd-api/us-central1/api/hikingtrails/${_id}`, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({Email: email, Comment: review}),
+    })
+      .then((results) => results.json())
+      .then((data) => {
+        console.log((data))
+      })
+      .catch((error) => console.error(error));
+      console.log(email, review)
+  };
 
   return (
     <>
@@ -21,6 +40,7 @@ export default function ReviewTrailModal({trail, show, setShow}) {
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Email address</Form.Label>
               <Form.Control
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 placeholder="name@example.com"
                 autoFocus
@@ -30,8 +50,12 @@ export default function ReviewTrailModal({trail, show, setShow}) {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Label>Review</Form.Label>
+              <Form.Control
+                onChange={(e) => setReview(e.target.value)}
+                as="textarea"
+                rows={3}
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -39,7 +63,13 @@ export default function ReviewTrailModal({trail, show, setShow}) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button
+            variant="primary"
+            onClick={() => {
+              handleClose();
+              addReview();
+            }}
+          >
             Save Changes
           </Button>
         </Modal.Footer>

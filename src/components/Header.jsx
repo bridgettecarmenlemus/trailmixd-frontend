@@ -2,7 +2,6 @@ import styles from "./Header.css";
 import react from "react";
 import Nav from 'react-bootstrap/Nav';
 
-
 export default function Header() {
   return (
     <>
@@ -32,41 +31,6 @@ export default function Header() {
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 {/* <Nav.Item>

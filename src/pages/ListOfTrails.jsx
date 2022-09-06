@@ -24,10 +24,13 @@ export default function ListOfTrails() {
         <Row>
           {hikingTrails?.map((trail) => {
             return (
-
               <Col xs={5} md={4}>
                 <div class="card-columns">
-                  <TrailNameCards key={trail._id} trail={trail} style={{ width: "18rem" }}/>
+                  <TrailNameCards
+                    key={trail._id}
+                    trail={trail}
+                    style={{ width: "18rem" }}
+                  />
                 </div>
               </Col>
             );
@@ -38,5 +41,3 @@ export default function ListOfTrails() {
     </>
   );
 }
-
-              
