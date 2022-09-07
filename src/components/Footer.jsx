@@ -9,7 +9,7 @@ export default function Footer () {
         <a href="https://www.linkedin.com/in/bridgettecarmenlemus/" target="_blank"><button className="footerButton">LinkedIn</button></a>
         <a href="https://github.com/bridgettecarmenlemus"
         target="_blank"><button className="footerButton">GitHub</button></a>
-        <button className="footerButton">TRAILMIX'D</button>
+        <button className="footerButton" >TRAILMIX'D</button>
         <button className="footerButton">About</button>
         <a href="https://bocacode.com/candidates"
         target="_blank">

@@ -8,6 +8,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
   const { _id } = trail;
   const [email, setEmail] = useState("");
   const [review, setReview] = useState("");
+ 
   console.log(trail);
   const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
@@ -32,7 +33,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <ModalTitle>{trail.Hiking_Trail}</ModalTitle>
         </Modal.Header>
         <Modal.Body>
@@ -60,7 +61,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={()=>setShow(false)}>
             Close
           </Button>
           <Button
