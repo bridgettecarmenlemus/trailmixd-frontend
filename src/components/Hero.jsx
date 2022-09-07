@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import "./Hero.css";
 import video from "../assets/videos/mtnrange.mp4";
+import Carousel from "./Carousel";
+
 
 export default function Hero() {
   return (
@@ -20,6 +22,9 @@ export default function Hero() {
       <h1 className="body-two">
         See what others are saying about Trailmix'D
       </h1>
+      <h2 >
+        <Carousel />
+        </h2>
     </div>
     </>
   );

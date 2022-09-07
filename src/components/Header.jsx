@@ -8,18 +8,18 @@ export default function Header() {
     <div className="nav">
     <Nav className="justify-content-end nav" activeKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">TRAILMIX'D</Nav.Link>
+          <Nav.Link href="/">TRAILMIX'D</Nav.Link>
         </Nav.Item>
       </Nav>
         <div className="nav">
         <Nav.Item>
-          <Nav.Link eventKey="">About</Nav.Link>
+          <Nav.Link href="/about">About</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="https://bocacode.com/candidates"target="_blank">Team</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="locations">Locations</Nav.Link>
+          <Nav.Link href="/trails">Locations</Nav.Link>
         </Nav.Item>
         </div>
     <Nav className="justify-content-end nav" activeKey="/home">

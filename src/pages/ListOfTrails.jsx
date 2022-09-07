@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer.jsx";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
@@ -37,7 +36,6 @@ export default function ListOfTrails() {
           })}
         </Row>
       </Container>
-      <Footer />
     </>
   );
 }
