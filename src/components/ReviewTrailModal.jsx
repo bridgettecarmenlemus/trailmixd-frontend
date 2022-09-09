@@ -11,8 +11,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
   const [email, setEmail] = useState("");
   const [review, setReview] = useState("");
 
-  console.log(trail);
-  const handleClose = () => setShow(true);
+ ;  const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
   const addReview = () => {
     console.log("we made it");
@@ -29,10 +28,10 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
     )
       .then((results) => results.json())
       .then((data) => {
-        console.log(data);
+        console.log(data[0].Level);
       })
       .catch((error) => console.error(error));
-    console.log(email, review);
+
   };
 
   return (
@@ -66,7 +65,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
               />
             </Form.Group>
             <FormGroup>
-              <ReviewAccordian/>
+              <ReviewAccordian trail={trail}/>
             </FormGroup>
           </Form>
         </Modal.Body>

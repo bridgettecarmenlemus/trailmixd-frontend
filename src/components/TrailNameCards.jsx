@@ -14,7 +14,7 @@ export default function TrailNameCards({ trail }) {
         <Card.Body>
           <Card.Title>{trail.Hiking_Trail}</Card.Title>
           <Card.Text>{trail.Description}</Card.Text>
-          {console.log(trail)}
+          {/* {console.log(trail)} */}
         </Card.Body>
         <Button className="reviewButton" onClick={() => setShow(true)}>
           Review this Trail ⭐️
