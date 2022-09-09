@@ -14,7 +14,6 @@ export default function Main () {
         target="_blank">
         <button>Team</button></a>
         </div>
-    
         </>
 
     )

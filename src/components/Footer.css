@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
 .footer {
     position: absolute;
     left: 0;
@@ -15,11 +17,13 @@
     justify-content: space-evenly;
     flex-direction: row;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
 .copyright {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 

@@ -1,33 +1,38 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
+import FormGroup from "react-bootstrap/esm/FormGroup";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import ModalTitle from "react-bootstrap/ModalTitle";
+import ReviewAccordian from "./ReviewAccordian";
 
 export default function ReviewTrailModal({ trail, show, setShow }) {
   const { _id } = trail;
   const [email, setEmail] = useState("");
   const [review, setReview] = useState("");
- 
+
   console.log(trail);
   const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
   const addReview = () => {
     console.log("we made it");
-    fetch(`http://localhost:5001/trailmixd-api/us-central1/api/hikingtrails/${_id}`, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({Email: email, Comment: review}),
-    })
+    fetch(
+      `http://localhost:5001/trailmixd-api/us-central1/api/hikingtrails/${_id}`,
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ Email: email, Comment: review }),
+      }
+    )
       .then((results) => results.json())
       .then((data) => {
-        console.log((data))
+        console.log(data);
       })
       .catch((error) => console.error(error));
-      console.log(email, review)
+    console.log(email, review);
   };
 
   return (
@@ -39,17 +44,19 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>First and Last Name</Form.Label>
               <Form.Control
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                placeholder="name@example.com"
+                placeholder="Bridgette Lemus"
                 autoFocus
               />
             </Form.Group>
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
+              placeholder="The views from this trail were amazing!"
+              autoFocus
             >
               <Form.Label>Review</Form.Label>
               <Form.Control
@@ -58,10 +65,14 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
                 rows={3}
               />
             </Form.Group>
+            <FormGroup>
+              <ReviewAccordian/>
+            </FormGroup>
           </Form>
         </Modal.Body>
+
         <Modal.Footer>
-          <Button variant="secondary" onClick={()=>setShow(false)}>
+          <Button variant="secondary" onClick={() => setShow(false)}>
             Close
           </Button>
           <Button

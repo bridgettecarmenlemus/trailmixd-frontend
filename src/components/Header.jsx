@@ -47,26 +47,3 @@ export default function Header() {
     </>
   );
 }
-
-{
-  /* <Nav.Item>
-  <Nav.Link href="/home">TRAILMIX'D</Nav.Link>
-</Nav.Item> */
-}
-{
-  /* <div> */
-}
-{
-  /* <Nav.Item>
-  <Nav.Link eventKey="about">About</Nav.Link>
-</Nav.Item>
-<Nav.Item>
-  <Nav.Link eventKey="team">Team</Nav.Link>
-</Nav.Item>
-<Nav.Item>
-  <Nav.Link eventKey="locations">Locations</Nav.Link>
-</Nav.Item> */
-}
-{
-  /* </div> */
-}
