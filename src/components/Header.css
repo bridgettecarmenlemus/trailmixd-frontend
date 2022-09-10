@@ -3,7 +3,7 @@
 .nav {
     display: flex;
     flex-direction: row;
-    background-color: #789746;
+    background-color: #6f8f72;
     justify-content: space-between;
     --bs-nav-link-color: #141619;
     font-family: 'Montserrat', sans-serif;

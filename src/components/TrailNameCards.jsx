@@ -3,16 +3,17 @@ import Card from "react-bootstrap/Card";
 import "../pages/ListOfTrails.css";
 import ReviewTrailModal from "./ReviewTrailModal";
 import Button from "react-bootstrap/Button";
+import "../components/TrailNameCards.css";
 
 export default function TrailNameCards({ trail }) {
   const [show, setShow] = useState(false);
 
   return (
     <>
-      <Card key={trail._id} style={{ width: "18rem" }}>
+      <Card className="card" key={trail._id} style={{ width: "100%" }}>
         <Card.Img variant="left" src={trail.Image} />
         <Card.Body>
-          <Card.Title>{trail.Hiking_Trail}</Card.Title>
+          <Card.Title className="title">{trail.Hiking_Trail}</Card.Title>
           <Card.Text>{trail.Description}</Card.Text>
           {/* {console.log(trail)} */}
         </Card.Body>

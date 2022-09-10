@@ -1,17 +1,18 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import FormGroup from "react-bootstrap/esm/FormGroup";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import ModalTitle from "react-bootstrap/ModalTitle";
+import { UserContext } from "../context/UserContext";
 import ReviewAccordian from "./ReviewAccordian";
 
 export default function ReviewTrailModal({ trail, show, setShow }) {
   const { _id } = trail;
   const [email, setEmail] = useState("");
-  const [review, setReview] = useState("");
-
- ;  const handleClose = () => setShow(true);
+  const {review, setReview} = useContext(UserContext)
+  const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
   const addReview = () => {
     console.log("we made it");
@@ -28,7 +29,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
     )
       .then((results) => results.json())
       .then((data) => {
-        console.log(data[0].Level);
+        setReview(data);
       })
       .catch((error) => console.error(error));
 

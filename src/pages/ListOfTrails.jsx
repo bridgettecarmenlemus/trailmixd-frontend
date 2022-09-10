@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import "./ListOfTrails.css";
 import TrailNameCards from "../components/TrailNameCards.jsx";
+import { UserContext } from "../context/UserContext";
 
 export default function ListOfTrails() {
+  const {review, setReview} = useContext(UserContext)
   const [hikingTrails, setHikingTrails] = useState();
 
   useEffect(() => {
@@ -14,7 +16,7 @@ export default function ListOfTrails() {
       .then((results) => results.json())
       .then((data) => setHikingTrails(data))
       .catch((e) => console.error(e));
-  }, []);
+  }, [review, setReview]);
 
   return (
     <>
