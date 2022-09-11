@@ -1,45 +1,52 @@
 import Carousel from "react-bootstrap/Carousel";
 import React from "react";
+import Slide1 from "../assets/videos/images/Slide1.jpg";
+import Slide2 from "../assets/videos/images/Slide2.jpg";
+import Slide3 from "../assets/videos/images/Slide3.jpg";
 
 export default function () {
   return (
     <>
       <Carousel>
-        <Carousel.Item>
+        <Carousel.Item interval={1400}>
           <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
+            width="700"
+            height="400"
+            className="slide1"
+            src={Slide1}
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Sammy</h3>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item interval={1400}>
           <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
+            width="700"
+            height="400"
+            className="slide2"
+            src={Slide2}
             alt="Second slide"
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Jake</h3>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item interval={1400}>
           <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
+            width="700"
+            height="400"
+            className="slide3"
+            src={Slide3}
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <h3>Alex</h3>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

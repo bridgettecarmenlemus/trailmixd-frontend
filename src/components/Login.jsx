@@ -5,7 +5,8 @@ import '../App.css';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
-
+import "../components/Footer.css"
+import "../components/Login.css"
 
 
 export default function Login () {
@@ -24,11 +25,15 @@ export default function Login () {
       };
 
 
-
   return (
-    <div>
-      <button className="button" onClick={handleLogin}><i className="fab fa-google"></i>Sign in with google</button>
+    <>
+
+    <div className="button">
+      <button onClick={handleLogin}><i className="google"></i>Sign in with google</button>
+
     </div>
+
+    </>
   )
 }
 

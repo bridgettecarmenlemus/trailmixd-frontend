@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import { UserContextProvider } from "./context/UserContext";
+import Carousel from "./components/Carousel";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           </Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
+        
         <Footer />
         </UserContextProvider>
       </BrowserRouter>
