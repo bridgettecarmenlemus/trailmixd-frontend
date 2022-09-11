@@ -4,6 +4,8 @@
 .google {
   display: block;
   width: 200px;
+  align-items: flex-end;
+  
 
  
 }

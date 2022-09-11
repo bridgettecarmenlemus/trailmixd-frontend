@@ -29,7 +29,9 @@ export default function Login () {
     <>
 
     <div className="button">
+      
       <button onClick={handleLogin}><i className="google"></i>Sign in with google</button>
+      
 
     </div>
 

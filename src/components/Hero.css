@@ -10,6 +10,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  box-sizing: border-box;
 
 }
 .welcome-container{
@@ -32,4 +33,10 @@
 
 .carousel {
   align-items: center;
+}
+
+.body-two{
+  background-color: #6f8f72;
+  padding: 20px;
+
 }

@@ -16,16 +16,16 @@ export default function Header() {
   return (
     <>
       <div className="nav">
-        <Nav className="justify-content-end nav" activeKey="/home">
+        <Nav className="justify-content-end trailmix" activeKey="/home">
           <Nav.Item>
             <Nav.Link href="/">TRAILMIX'D</Nav.Link>
           </Nav.Item>
         </Nav>
-        <div className="nav">
-          <Nav.Item>
+        <div className="about">
+          <Nav.Item className="about">
             <Nav.Link href="/about">About</Nav.Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="team">
             <Nav.Link href="https://bocacode.com/candidates" target="_blank">
               Team
             </Nav.Link>
@@ -34,7 +34,7 @@ export default function Header() {
             <Nav.Link href="/trails">Locations</Nav.Link>
           </Nav.Item> */}
         </div>
-        <Nav className="justify-content-end nav" activeKey="/home">
+        <Nav className="justify-content-end login" activeKey="/home">
           <Nav.Item>
             {user ? (
               <button onClick={handleLogout}>Logout</button>

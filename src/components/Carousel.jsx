@@ -8,7 +8,7 @@ export default function () {
   return (
     <>
       <Carousel>
-        <Carousel.Item interval={1400}>
+        <Carousel.Item interval={1700}>
           <img
             width="700"
             height="400"
@@ -21,7 +21,7 @@ export default function () {
             <p>⭐️⭐️⭐️⭐️⭐️</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={1400}>
+        <Carousel.Item interval={1700}>
           <img
             width="700"
             height="400"
@@ -35,7 +35,7 @@ export default function () {
             <p>⭐️⭐️⭐️⭐️⭐️</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={1400}>
+        <Carousel.Item interval={1700}>
           <img
             width="700"
             height="400"
