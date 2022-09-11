@@ -20,7 +20,11 @@ export default function ListOfTrails() {
 
   return (
     <>
-      {/* {!hikingTrails ? <h2>Loading..</h2>>:  */}
+    <div class="header">
+        <h1>Header</h1>
+        <p>My supercool header</p>
+      </div>
+      {/* {!hikingTrails ? <h2>Loading..</h2>>: } */}
       <Container>
         <Row>
           {hikingTrails?.map((trail) => {

@@ -1,11 +1,14 @@
-/* .button {
-  margin: 700;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
 .google {
   display: block;
   width: 200px;
-  align-items: flex-end;
-  
+  align-items: flex-end; 
+}
 
- 
+.header {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: auto;
+
 }

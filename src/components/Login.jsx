@@ -29,6 +29,7 @@ export default function Login () {
     <>
 
     <div className="button">
+      <h1 className='header'>Please click the button below to sign in with google</h1>
       
       <button onClick={handleLogin}><i className="google"></i>Sign in with google</button>
       
