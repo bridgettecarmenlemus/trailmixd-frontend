@@ -37,7 +37,7 @@ export default function Header() {
         <Nav className="justify-content-end login" activeKey="/home">
           <Nav.Item>
             {user ? (
-              <button onClick={handleLogout}>Logout</button>
+              <button className="logout" onClick={handleLogout}>Logout</button>
             ) : (
               <Nav.Link href="/login">Login</Nav.Link>
             )}

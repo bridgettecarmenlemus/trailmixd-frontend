@@ -12,19 +12,21 @@ export default function ListOfTrails() {
   const [hikingTrails, setHikingTrails] = useState();
 
   useEffect(() => {
-    fetch("https://trailmixd-api.web.app/hikingtrails")
+    fetch("https://trailmixd-api.web.app/gethikingtrails")
       .then((results) => results.json())
       .then((data) => setHikingTrails(data))
       .catch((e) => console.error(e));
   }, [review, setReview]);
+  console.log({review})
 
   return (
     <>
     <div class="header">
-        <h1>Header</h1>
-        <p>My supercool header</p>
+        <h1>The Great State of Washington ⛰ </h1>
+        <p>Review any of the following trails below! </p>
       </div>
-      {/* {!hikingTrails ? <h2>Loading..</h2>>: } */}
+      {/* !hikingTrails ? <h2>Loading..</h2>  */}
+      <div>
       <Container>
         <Row>
           {hikingTrails?.map((trail) => {
@@ -42,6 +44,7 @@ export default function ListOfTrails() {
           })}
         </Row>
       </Container>
+      </div>
     </>
   );
 }

@@ -1,0 +1,11 @@
+.card-columns {
+    width: 100%;
+    padding: 9px 20px 9px 20px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    height: 100% !important;
+}
+
+.header {
+    margin-top: 60px;
+}

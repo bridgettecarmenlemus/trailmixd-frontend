@@ -5,12 +5,12 @@ import { UserContext } from "../context/UserContext";
 export default function ReviewAccordian({ trail }) {
 const {review, setReview} = useContext(UserContext)
 console.log({review})
-  useEffect(() => {
-    fetch("https://trailmixd-api.web.app/gethikingtrails")
-      .then((results) => results.json())
-      .then((data) => setReview(data))
-      .catch((e) => console.error(e));
-  }, [review, setReview]);
+  // useEffect(() => {
+  //   fetch("https://trailmixd-api.web.app/gethikingtrails")
+  //     .then((results) => results.json())
+  //     .then((data) => setReview(data))
+  //     .catch((e) => console.error(e));
+  // }, [review, setReview]);
 
   return (
     <Accordion defaultActiveKey="0" flush>

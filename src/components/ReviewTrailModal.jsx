@@ -7,6 +7,7 @@ import Modal from "react-bootstrap/Modal";
 import ModalTitle from "react-bootstrap/ModalTitle";
 import { UserContext } from "../context/UserContext";
 import ReviewAccordian from "./ReviewAccordian";
+import "../components/ReviewTrailModal.css"
 
 export default function ReviewTrailModal({ trail, show, setShow }) {
   const { _id } = trail;
@@ -14,6 +15,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
   const {review, setReview} = useContext(UserContext)
   const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
+  console.log({review})
   const addReview = () => {
     console.log("we made it");
     fetch(
@@ -72,10 +74,10 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShow(false)}>
+          <Button className="close" variant="secondary" onClick={() => setShow(false)}>
             Close
           </Button>
-          <Button
+          <Button className="savechanges"
             variant="primary"
             onClick={() => {
               handleClose();

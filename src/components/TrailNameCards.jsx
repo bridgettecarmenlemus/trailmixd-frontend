@@ -10,16 +10,13 @@ export default function TrailNameCards({ trail }) {
 
   return (
     <>
-      <div class="header">
-        <h1>Header</h1>
-        <p>My supercool header</p>
-      </div>
-
       <div id="box">
         <Card className="card" key={trail._id} style={{ width: "100%" }}>
           <Card.Img variant="left" src={trail.Image} />
           <Card.Body>
             <Card.Title className="title">{trail.Hiking_Trail}</Card.Title>
+            <Card.Subtitle className="subtitle">{trail.Park}</Card.Subtitle>
+            <Card.Text className="level">{trail.Level}</Card.Text>
             <Card.Text>{trail.Description}</Card.Text>
             {/* {console.log(trail)} */}
           </Card.Body>
