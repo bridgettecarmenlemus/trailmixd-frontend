@@ -19,7 +19,7 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
   const addReview = () => {
     console.log("we made it");
     fetch(
-      `http://localhost:5001/trailmixd-api/us-central1/api/hikingtrails/${_id}`,
+      ` https://trailmixd-api.web.app/hikingtrails/${_id}`,
       {
         method: "POST",
         mode: "cors",

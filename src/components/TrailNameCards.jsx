@@ -11,7 +11,7 @@ export default function TrailNameCards({ trail }) {
   return (
     <>
       <div id="box">
-        <Card className="card" key={trail._id} style={{ width: "100%" }}>
+        <Card className="cards" key={trail._id} style={{ width: "100%" }}>
           <Card.Img variant="left" src={trail.Image} />
           <Card.Body>
             <Card.Title className="title">{trail.Hiking_Trail}</Card.Title>

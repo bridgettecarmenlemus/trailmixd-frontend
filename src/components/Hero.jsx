@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
-import { useEffect } from "react";
-import "./Hero.css";
-import video from "../assets/videos/mtnrange.mp4";
-import Carousel from "./Carousel";
+import { UserContext } from "../context/UserContext";
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import Carousel from "./Carousel";
 import Nav from "react-bootstrap/Nav";
-import { UserContext } from "../context/UserContext";
+import video from "../assets/videos/mtnrange.mp4";
+import "./Hero.css";
 
 export default function Hero() {
   const auth = getAuth();

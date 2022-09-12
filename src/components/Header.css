@@ -1,40 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
 
 .nav {
-    display: flex;
-    flex-direction: row;
-    background-color: #6f8f72;
-    justify-content: space-between;
-    --bs-nav-link-color: #141619;
-    font-family: 'Montserrat', sans-serif;
+    display: flex !important;
+    flex-direction: row !important;
+    background-color: #6f8f72 !important;
+    justify-content: space-between !important;
+    --bs-nav-link-color: #141619 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 5px !important;
 }
 
 .trailmix{
-  background-color: #a1ada5;
-  border-radius: 100px;
-  /* box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 16px; */
-  /* color: green; */
-  cursor: pointer;
-  display: inline-block;
-  /* padding: 7px 20px; */
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  background-color: #a1ada5 !important;
+  border-radius: 100px !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  transition: all 250ms !important;
+  border: 0 !important;
+  font-size: 16px !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+  
 }
 
 .login {
     background-color: #a1ada5;
     border-radius: 100px;
-    /* box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px; */
     color: green;
     cursor: pointer;
     display: inline-block;
-    /* padding: 7px 20px; */
+    padding: 6px 20px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
@@ -46,23 +44,21 @@
 }
 
 .about, .team {
-    background-color: #a1ada5;
-    border-radius: 100px;
-    /* box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px; */
-    color: green;
-    cursor: pointer;
-    display: inline-block;
-    /* padding: 7px 20px; */
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 16px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    background-color: #a1ada5 !important;
+    border-radius: 100px !important;
+    color: green !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    text-align: center !important;
+    margin: auto !important;
+    text-decoration: none !important;
+    transition: all 250ms !important;
+    border: 0 !important;
+    font-size: 16px !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    touch-action: manipulation !important;
 }
-
 
 .login-container {
     display: flex;
@@ -74,7 +70,6 @@
 .logout {
     background-color: #a1ada5;
     border-radius: 100px;
-    /* box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px; */
     color: rgb(22, 24, 22);
     cursor: pointer;
     display: inline-block;
@@ -88,4 +83,23 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     margin-top: 0px;
+}
+.welcome-ptag {
+    margin-top: none;
+    margin-bottom: 0rem;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: rgb(22, 24, 22);
+}
+
+.logo-image {
+    margin-right: 18px;
+    margin-left: 18px;
+    width: 32px;
+    border-radius: 100px;
 }

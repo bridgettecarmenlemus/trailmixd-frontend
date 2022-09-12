@@ -6,13 +6,14 @@ import { useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 
 export default function Header() {
-  const auth = getAuth()
+  const auth = getAuth();
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     signOut(auth).then(() => navigate("/"));
   };
+  console.log({user})
   return (
     <>
       <div className="nav">
@@ -23,21 +24,26 @@ export default function Header() {
         </Nav>
         <div className="about">
           <Nav.Item className="about">
-            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link  href="/about">About</Nav.Link>
           </Nav.Item>
           <Nav.Item className="team">
             <Nav.Link href="https://bocacode.com/candidates" target="_blank">
               Team
             </Nav.Link>
           </Nav.Item>
-          {/* <Nav.Item>
-            <Nav.Link href="/trails">Locations</Nav.Link>
-          </Nav.Item> */}
         </div>
         <Nav className="justify-content-end login" activeKey="/home">
-          <Nav.Item>
+          <Nav.Item >
             {user ? (
-              <button className="logout" onClick={handleLogout}>Logout</button>
+              <div className="login-button">
+                <p className="welcome-ptag">Welcome, {user.displayName}</p>
+                <img className="logo-image"
+                src={user.photoURL}
+                />
+                <button className="logout" onClick={handleLogout}>
+                  Logout
+                </button>
+              </div>
             ) : (
               <Nav.Link href="/login">Login</Nav.Link>
             )}

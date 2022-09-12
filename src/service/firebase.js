@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-    apiKey: "AIzaSyDgMu8mpjKbDW_eXJ8c5znj7OZKOxlyVAA",
-    authDomain: "trailmixd-ui-5e77f.firebaseapp.com",
-    projectId: "trailmixd-ui-5e77f",
-    storageBucket: "trailmixd-ui-5e77f.appspot.com",
-    messagingSenderId: "767973169430",
-    appId: "1:767973169430:web:fb6fa3920d165b70a4d837"
-  };
+  apiKey: "AIzaSyBiwL-XEtw2v7f4_xmfY3UCXodG2Y8E36g",
+  authDomain: "trailmix-bl-fe.firebaseapp.com",
+  projectId: "trailmix-bl-fe",
+  storageBucket: "trailmix-bl-fe.appspot.com",
+  messagingSenderId: "204228567497",
+  appId: "1:204228567497:web:97a19a5bfc6243b9228818"
+};
