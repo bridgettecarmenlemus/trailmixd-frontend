@@ -7,34 +7,32 @@ import Modal from "react-bootstrap/Modal";
 import ModalTitle from "react-bootstrap/ModalTitle";
 import { UserContext } from "../context/UserContext";
 import ReviewAccordian from "./ReviewAccordian";
-import "../components/ReviewTrailModal.css"
+import "../components/ReviewTrailModal.css";
 
 export default function ReviewTrailModal({ trail, show, setShow }) {
   const { _id } = trail;
   const [email, setEmail] = useState("");
-  const {review, setReview} = useContext(UserContext)
+  const { review, setReview, fetchHikingTrails, hikingTrails } = useContext(UserContext);
   const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
-  console.log({review})
+  console.log({ review });
+  console.log({ hikingTrails });
   const addReview = () => {
     console.log("we made it");
-    fetch(
-      ` https://trailmixd-api.web.app/hikingtrails/${_id}`,
-      {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ Email: email, Comment: review }),
-      }
-    )
+    fetch(`https://trailmixd-api.web.app/hikingtrails/${_id}`, {
+      method: "POST",
+      // mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ Email: email, Comment: review }),
+    })
       .then((results) => results.json())
       .then((data) => {
         setReview(data);
       })
+      .then(fetchHikingTrails())
       .catch((error) => console.error(error));
-
   };
 
   return (
@@ -68,22 +66,20 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
               />
             </Form.Group>
             <FormGroup>
-              <ReviewAccordian trail={trail}/>
+              <ReviewAccordian trail={trail} />
             </FormGroup>
           </Form>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button className="close" variant="secondary" onClick={() => setShow(false)}>
+          <Button
+            className="close"
+            variant="secondary"
+            onClick={() => setShow(false)}
+          >
             Close
           </Button>
-          <Button className="savechanges"
-            variant="primary"
-            onClick={() => {
-              handleClose();
-              addReview();
-            }}
-          >
+          <Button className="savechanges" variant="primary" onClick={addReview}>
             Save Changes
           </Button>
         </Modal.Footer>

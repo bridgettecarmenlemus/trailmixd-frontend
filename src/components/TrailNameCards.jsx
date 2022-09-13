@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import "../pages/ListOfTrails.css";
 import ReviewTrailModal from "./ReviewTrailModal";
 import Button from "react-bootstrap/Button";
-import "../components/TrailNameCards.css";
+import "./TrailNameCards.css";
 
 export default function TrailNameCards({ trail }) {
   const [show, setShow] = useState(false);

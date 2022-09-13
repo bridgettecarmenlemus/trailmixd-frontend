@@ -1,12 +1,10 @@
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
-import "../components/Footer.css";
-import "../components/Login.css";
-import video from "../assets/videos/akn2.mp4"
+import "./Login.css";
+import video from "../assets/videos/akn2.mp4";
 
 export default function Login() {
   const { setUser } = useContext(UserContext);
@@ -24,18 +22,20 @@ export default function Login() {
   };
 
   return (
-    <>
-     <div className="video-container">
-          <video src={video} autoPlay loop muted className="background-video" />
-        <button onClick={handleLogin}>
-          <i className="google"></i>Sign in with google
-        </button>
+    <div className="login-page-container">
+    <div className="sign-in-container">
       <div className="button">
+      <button className="google" onClick={handleLogin}>
+        Sign in with google
+      </button>
+      </div>
         <h1 className="header">
           Please click this button to sign in with google
         </h1>
-      </div>
+    </div>
+        <div className="login-video-container">
+          <video src={video} autoPlay loop muted className="login-background-video" />
         </div>
-    </>
+    </div>
   );
 }

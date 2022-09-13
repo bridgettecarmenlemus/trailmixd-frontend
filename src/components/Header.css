@@ -27,12 +27,12 @@
 }
 
 .login {
-    background-color: #a1ada5;
-    border-radius: 100px;
-    color: green;
+    background-color: #a1ada5 !important;
+    border-radius: 100px !important;
+    color: green ;
     cursor: pointer;
-    display: inline-block;
-    padding: 6px 20px;
+    display: inline-block !important;
+    padding: 6px 20px ;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
@@ -68,33 +68,34 @@
 }
 
 .logout {
-    background-color: #a1ada5;
-    border-radius: 100px;
-    color: rgb(22, 24, 22);
-    cursor: pointer;
-    display: inline-block;
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 16px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    margin-top: 0px;
+    background-color: #a1ada5 !important;
+    border-radius: 100px !important;
+    color: rgb(22, 24, 22) !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    padding: 7px 20px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    transition: all 250ms !important;
+    border: 0 !important;
+    font-size: 16px !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    touch-action: manipulation !important;
+    margin-top: 0px !important;
 }
 .welcome-ptag {
-    margin-top: none;
-    margin-bottom: 0rem;
+    margin-left: 25px;
+    margin-top: none !important;
+    margin-bottom: 0rem !important;
 }
 
 .login-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    color: rgb(22, 24, 22);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-content: center !important;
+    color: rgb(22, 24, 22) !important;
 }
 
 .logo-image {

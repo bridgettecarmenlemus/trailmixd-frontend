@@ -12,8 +12,17 @@ export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState();
   const [loaded, setLoaded] = useState(false);
   const [review, setReview] = useState("");
+  const [hikingTrails, setHikingTrails] = useState();
   const auth = getAuth();
-  const value = { user, setUser, auth, review, setReview};
+  const value = { user, setUser, auth, review, setReview, fetchHikingTrails, hikingTrails, setHikingTrails};
+
+
+  function fetchHikingTrails() {
+    fetch("https://trailmixd-api.web.app/gethikingtrails")
+      .then((results) => results.json())
+      .then((data) => setHikingTrails(data))
+      .catch((e) => console.error(e));
+  }
 
   useEffect(() => {
     onAuthStateChanged(auth, (u) => {
