@@ -12,13 +12,12 @@ import "../components/ReviewTrailModal.css";
 export default function ReviewTrailModal({ trail, show, setShow }) {
   const { _id } = trail;
   const [email, setEmail] = useState("");
-  const { review, setReview, fetchHikingTrails, hikingTrails } = useContext(UserContext);
+  const { review, setReview, setHikingTrails, hikingTrails } = useContext(UserContext);
   const handleClose = () => setShow(true);
   const handleShow = () => setShow(true);
   console.log({ review });
   console.log({ hikingTrails });
   const addReview = () => {
-    console.log("we made it");
     fetch(`https://trailmixd-api.web.app/hikingtrails/${_id}`, {
       method: "POST",
       // mode: "cors",
@@ -29,9 +28,9 @@ export default function ReviewTrailModal({ trail, show, setShow }) {
     })
       .then((results) => results.json())
       .then((data) => {
-        setReview(data);
+        setHikingTrails(data);
       })
-      .then(fetchHikingTrails())
+      // .then(fetchHikingTrails())
       .catch((error) => console.error(error));
   };
 
